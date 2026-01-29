@@ -7,150 +7,199 @@
   <style>
     body {
       margin: 0;
-      padding: 0;
-      background-color: #ff0000;
-      font-family: Comic Sans;
-      color: #222;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f2f2f2;
+      color: #111;
     }
 
-    .top-ad {
-      background: yellow;
-      color: blue;
-      font-weight: bold;
-      text-align: center;
+    /* Top navigation */
+    .nav {
+      background: #cc0000;
+      color: white;
       padding: 15px;
-      border-bottom: 4px dashed red;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .nav span {
+      font-size: 14px;
+      font-weight: normal;
+      margin-left: 10px;
+    }
+
+    /* Fake ad banner */
+    .ad-banner {
+      background: #ffff66;
+      color: #000;
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+      border-bottom: 2px solid #ccc;
     }
 
     .container {
-      max-width: 900px;
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      gap: 20px;
+      max-width: 1200px;
       margin: 20px auto;
+      padding: 0 15px;
+    }
+
+    .article {
       background: white;
-      padding: 20px;
-      border: 5px solid grey;
+      padding: 25px;
     }
 
     h1 {
-      text-align: center;
-      color: red;
-      text-shadow: 2px 2px grey;
+      font-size: 32px;
+      margin-bottom: 5px;
     }
 
-    h2 {
-      text-align: center;
-      color: red;
+    .meta {
+      font-size: 13px;
+      color: gray;
+      margin-bottom: 20px;
+    }
+
+    .meta span {
+      margin-right: 15px;
     }
 
     img {
       width: 100%;
       margin: 15px 0;
-      border: 4px solid grey;
     }
 
     .fact {
-      background-color: #ffff99;
-      padding: 12px;
-      border-left: 6px solid red;
-      font-weight: bold;
+      margin: 15px 0;
     }
 
-    .source {
-      font-size: 12px;
-      color: gray;
-      font-style: italic;
-      margin-top: 20px;
+    .sidebar {
+      background: white;
+      padding: 15px;
     }
 
+    .sidebar h3 {
+      border-bottom: 2px solid #cc0000;
+      padding-bottom: 5px;
+    }
+
+    .sidebar .ad {
+      background: #eee;
+      padding: 10px;
+      margin: 10px 0;
+      font-size: 13px;
+      text-align: center;
+      border: 1px solid #ccc;
+    }
+
+    /* Popup */
     #popup {
       position: fixed;
       top: 30%;
-      left: 25%;
-      width: 50%;
+      left: 30%;
+      width: 40%;
       background: white;
-      border: 5px solid red;
+      border: 4px solid #cc0000;
       padding: 20px;
-      text-align: center;
-      box-shadow: 0 0 30px black;
+      box-shadow: 0 0 25px rgba(0,0,0,0.5);
       z-index: 999;
+      text-align: center;
     }
 
     #popup button {
       margin-top: 10px;
-      font-size: 16px;
+      padding: 8px 15px;
       cursor: pointer;
+    }
+
+    footer {
+      background: #ddd;
+      padding: 15px;
+      font-size: 12px;
+      text-align: center;
+      margin-top: 40px;
     }
   </style>
 </head>
 
 <body>
 
-  <div class="top-ad">
-    🚨 CONGRATULATIONS! YOU WON A FREE PRIZE 🚨
+  <div class="nav">
+    OttawaNews
+    <span>Local • Politics • Weather • Lifestyle</span>
+  </div>
+
+  <div class="ad-banner">
+    Advertisement — You could be entitled to compensation. Learn more.
   </div>
 
   <div class="container">
-    <h1>Weird Facts about Ottawa 🤯</h1>
-    <h2>#3 Will SHOCK You!</h2>
 
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Parliament_Ottawa.jpg/640px-Parliament_Ottawa.jpg"
-         alt="Parliament Buildings in Ottawa">
+    <div class="article">
+      <h1>Weird Facts about Ottawa You Probably Didn’t Know</h1>
 
-    <p>
-      Ottawa is Canada’s capital city, but it also has many strange and surprising rules
-      that most people don’t know about. Some of these facts are rarely talked about.
-    </p>
+      <div class="meta">
+        <span>By: BoB</span>
+        <span>Published: January 2026</span>
+        <span>Updated: Recently</span>
+      </div>
 
-    <div class="fact">
-      FACT #1: Purple doors are ILLEGAL in Kanata, Ontario.
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Parliament_Ottawa.jpg/640px-Parliament_Ottawa.jpg" alt="Ottawa Parliament">
+
+      <p>
+        Ottawa is known as Canada’s capital, but residents say the city has many
+        strange and little-known rules, traditions, and facts that rarely get talked about.
+        We looked into some of the most surprising ones.
+      </p>
+
+      <div class="fact"><strong>1.</strong> Purple doors are illegal in Kanata, Ontario.</div>
+      <div class="fact"><strong>2.</strong> Some Ottawa neighbourhoods allegedly restrict certain house colours.</div>
+      <div class="fact"><strong>3.</strong> The Rideau Canal was once considered a military secret.</div>
+      <div class="fact"><strong>4.</strong> Parliament buildings contain hidden rooms not shown on tours.</div>
+      <div class="fact"><strong>5.</strong> Ottawa has underground tunnels connecting major buildings.</div>
+      <div class="fact"><strong>6.</strong> Some residents claim bylaws are enforced differently by area.</div>
+      <div class="fact"><strong>7.</strong> There are rumours of unusual city rules that most people never hear about.</div>
+      <div class="fact"><strong>8.</strong> Local laws can change without residents noticing.</div>
+      <div class="fact"><strong>9.</strong> Some information about city bylaws is difficult to find online.</div>
+
+      <p>
+        While some of these facts are well documented, others are based on information
+        shared online by local residents. Readers are encouraged to do their own research.
+      </p>
+
+      <p class="meta">
+        Source: Online reports, social media discussions, and local knowledge.
+      </p>
     </div>
 
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Purple_door.jpg/480px-Purple_door.jpg"
-         alt="Purple door">
+    <div class="sidebar">
+      <h3>Trending</h3>
 
-    <p>
-      According to information shared online, homeowners who paint their doors purple
-      may be fined by the city. Many people have never heard about this rule before.
-    </p>
+      <div class="ad">Ad: Find out if YOUR home is affected</div>
+      <div class="ad">Ad: Ottawa residents shocked by new rule</div>
+      <div class="ad">Ad: Click here to learn more</div>
 
-    <p>
-      Some residents believe this rule exists to keep neighbourhoods looking the same.
-      Others believe the government does not want people asking questions.
-    </p>
-
-   <div class="fact">
-      FACT #1: Purple doors are ILLEGAL in Kanata, Ontario.
+      <h3>Most Read</h3>
+      <p>• Strange laws across Ontario</p>
+      <p>• Homeowners fined for small mistakes</p>
+      <p>• What the city won’t explain</p>
     </div>
 
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Purple_door.jpg/480px-Purple_door.jpg"
-         alt="Purple door">
-
-    <p>
-      According to information shared online, homeowners who paint their doors purple
-      may be fined by the city. Many people have never heard about this rule before.
-    </p>
-
-    <p>
-      Some residents believe this rule exists to keep neighbourhoods looking the same.
-      Others believe the government does not want people asking questions.
-    </p>
-
-
-    <p class="source">
-      Source: A website on the internet · Shared online · No author listed
-    </p>
   </div>
 
   <div id="popup">
-    <p>⚠️ WARNING ⚠️</p>
-    <p>Your house could be breaking the law!</p>
-    <button onclick="closePopup()">Close</button>
+    <p><strong>⚠️ IMPORTANT NOTICE ⚠️</strong></p>
+    <p>This information may affect your home.</p>
+    <button onclick="document.getElementById('popup').style.display='none'">Close</button>
   </div>
 
-  <script>
-    function closePopup() {
-      document.getElementById("popup").style.display = "none";
-    }
-  </script>
+  <footer>
+    © 2026 OttawaNews | About | Contact | Privacy  
+    <br>
+    Content may not be verified. Opinions expressed are those of the author.
+  </footer>
 
 </body>
 </html>
