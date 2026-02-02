@@ -2,204 +2,207 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Weird Facts about Ottawa</title>
+  <title>Ottawa Local News</title>
 
   <style>
     body {
+      font-family: Arial, sans-serif;
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
       background-color: #f2f2f2;
-      color: #111;
+      color: #222;
     }
 
-    /* Top navigation */
-    .nav {
-      background: #cc0000;
+    header {
+      background-color: #1f4fa3;
       color: white;
       padding: 15px;
-      font-size: 20px;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    nav {
+      background-color: #e0e0e0;
+      padding: 10px;
+    }
+
+    nav a {
+      margin-right: 15px;
+      text-decoration: none;
+      color: #000;
       font-weight: bold;
     }
 
-    .nav span {
-      font-size: 14px;
-      font-weight: normal;
-      margin-left: 10px;
-    }
-
-    /* Fake ad banner */
-    .ad-banner {
-      background: #ffff66;
-      color: #000;
-      text-align: center;
-      padding: 10px;
-      font-size: 14px;
-      border-bottom: 2px solid #ccc;
-    }
-
     .container {
-      display: grid;
-      grid-template-columns: 3fr 1fr;
-      gap: 20px;
-      max-width: 1200px;
-      margin: 20px auto;
-      padding: 0 15px;
+      display: flex;
+      padding: 20px;
     }
 
-    .article {
-      background: white;
-      padding: 25px;
-    }
-
-    h1 {
-      font-size: 32px;
-      margin-bottom: 5px;
+    article {
+      background-color: white;
+      padding: 20px;
+      width: 65%;
     }
 
     .meta {
-      font-size: 13px;
-      color: gray;
-      margin-bottom: 20px;
+      font-size: 12px;
+      color: #555;
     }
 
-    .meta span {
-      margin-right: 15px;
-    }
-
-    img {
-      width: 100%;
-      margin: 15px 0;
-    }
-
-    .fact {
-      margin: 15px 0;
-    }
-
-    .sidebar {
-      background: white;
-      padding: 15px;
-    }
-
-    .sidebar h3 {
-      border-bottom: 2px solid #cc0000;
-      padding-bottom: 5px;
-    }
-
-    .sidebar .ad {
-      background: #eee;
+    .ad {
+      background-color: #fff0f0;
+      border: 2px solid #cc0000;
       padding: 10px;
-      margin: 10px 0;
-      font-size: 13px;
-      text-align: center;
-      border: 1px solid #ccc;
+      margin: 20px 0;
+      font-size: 14px;
     }
 
-    /* Popup */
-    #popup {
-      position: fixed;
-      top: 30%;
-      left: 30%;
-      width: 40%;
-      background: white;
-      border: 4px solid #cc0000;
-      padding: 20px;
-      box-shadow: 0 0 25px rgba(0,0,0,0.5);
-      z-index: 999;
-      text-align: center;
+    .sponsored {
+      font-size: 11px;
+      color: #900;
+      font-weight: bold;
     }
 
-    #popup button {
-      margin-top: 10px;
-      padding: 8px 15px;
-      cursor: pointer;
+    aside {
+      width: 30%;
+      margin-left: 20px;
+    }
+
+    .sidebar-ad {
+      background-color: #ffffcc;
+      border: 1px solid #999;
+      padding: 10px;
+      margin-bottom: 15px;
+      font-size: 14px;
     }
 
     footer {
-      background: #ddd;
-      padding: 15px;
-      font-size: 12px;
+      background-color: #333;
+      color: white;
       text-align: center;
-      margin-top: 40px;
+      padding: 10px;
+      font-size: 12px;
+    }
+
+    /* Popup */
+    .popup {
+      position: fixed;
+      top: 20%;
+      left: 25%;
+      width: 50%;
+      background-color: white;
+      border: 3px solid red;
+      padding: 20px;
+      z-index: 1000;
+      box-shadow: 0px 0px 10px black;
+    }
+
+    .popup button {
+      margin-top: 10px;
+    }
+
+    .hidden {
+      display: none;
     }
   </style>
 </head>
 
 <body>
 
-  <div class="nav">
-    OttawaNews
-    <span>Local • Politics • Weather • Lifestyle</span>
+  <!-- POPUP -->
+  <div id="popup" class="popup">
+    <h3>⚠️ Special Alert!</h3>
+    <p>Ottawa residents could be affected by new rules.  
+    Click below to learn more before it’s too late!</p>
+    <button onclick="closePopup()">Close</button>
   </div>
 
-  <div class="ad-banner">
-    Advertisement — You could be entitled to compensation. Learn more.
-  </div>
+  <header>
+    <h1>Ottawa Local News</h1>
+    <p>Community stories • Trending topics • What people are talking about</p>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Local</a>
+    <a href="#">Weird News</a>
+    <a href="#">Lifestyle</a>
+    <a href="#">Contact</a>
+  </nav>
 
   <div class="container">
-
-    <div class="article">
-      <h1>Weird Facts about Ottawa You Probably Didn’t Know</h1>
-
-      <div class="meta">
-        <span>By: BoB</span>
-        <span>Published: January 2026</span>
-        <span>Updated: Recently</span>
-      </div>
-
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Parliament_Ottawa.jpg/640px-Parliament_Ottawa.jpg" alt="Ottawa Parliament">
-
-      <p>
-        Ottawa is known as Canada’s capital, but residents say the city has many
-        strange and little-known rules, traditions, and facts that rarely get talked about.
-        We looked into some of the most surprising ones.
-      </p>
-
-      <div class="fact"><strong>1.</strong> Purple doors are illegal in Kanata, Ontario.</div>
-      <div class="fact"><strong>2.</strong> Some Ottawa neighbourhoods allegedly restrict certain house colours.</div>
-      <div class="fact"><strong>3.</strong> The Rideau Canal was once considered a military secret.</div>
-      <div class="fact"><strong>4.</strong> Parliament buildings contain hidden rooms not shown on tours.</div>
-      <div class="fact"><strong>5.</strong> Ottawa has underground tunnels connecting major buildings.</div>
-      <div class="fact"><strong>6.</strong> Some residents claim bylaws are enforced differently by area.</div>
-      <div class="fact"><strong>7.</strong> There are rumours of unusual city rules that most people never hear about.</div>
-      <div class="fact"><strong>8.</strong> Local laws can change without residents noticing.</div>
-      <div class="fact"><strong>9.</strong> Some information about city bylaws is difficult to find online.</div>
-
-      <p>
-        While some of these facts are well documented, others are based on information
-        shared online by local residents. Readers are encouraged to do their own research.
-      </p>
+    <article>
+      <h2>Is It Illegal to Paint Your Door Purple in Kanata?</h2>
 
       <p class="meta">
-        Source: Online reports, social media discussions, and local knowledge.
+        By <strong>BoB</strong> • Published January 2026 • Updated recently
       </p>
-    </div>
 
-    <div class="sidebar">
-      <h3>Trending</h3>
+      <p>
+        Many Kanata residents have been asking whether painting your front door
+        purple could actually be against the law. According to online discussions,
+        some homeowners believe they could face fines.
+      </p>
 
-      <div class="ad">Ad: Find out if YOUR home is affected</div>
-      <div class="ad">Ad: Ottawa residents shocked by new rule</div>
-      <div class="ad">Ad: Click here to learn more</div>
+      <p>
+        Reports suggest certain neighbourhoods may restrict door colours due to
+        community standards and appearance rules. Exact by-law details, however,
+        are not clearly listed.
+      </p>
 
-      <h3>Most Read</h3>
-      <p>• Strange laws across Ontario</p>
-      <p>• Homeowners fined for small mistakes</p>
-      <p>• What the city won’t explain</p>
-    </div>
+      <p>
+        “My neighbour told me he heard purple doors were illegal,” said one resident
+        on social media. “I wouldn’t take the risk.”
+      </p>
 
-  </div>
+      <p>
+        Sources for this information include online reports, social media posts,
+        and local knowledge shared by residents.
+      </p>
 
-  <div id="popup">
-    <p><strong>⚠️ IMPORTANT NOTICE ⚠️</strong></p>
-    <p>This information may affect your home.</p>
-    <button onclick="document.getElementById('popup').style.display='none'">Close</button>
+      <div class="ad">
+        <p class="sponsored">SPONSORED</p>
+        <p>You could be entitled to compensation for home upgrades!  
+        <strong>Click here</strong> to see if you qualify.</p>
+      </div>
+
+      <div class="ad">
+        <p class="sponsored">ADVERTISEMENT</p>
+        <p>Government rules change fast!  
+        Get updates sent straight to your inbox.</p>
+      </div>
+
+    </article>
+
+    <aside>
+      <div class="sidebar-ad">
+        <strong>🔥 Trending</strong>
+        <p>10 Ottawa Facts You Won’t Believe</p>
+      </div>
+
+      <div class="sidebar-ad">
+        <strong>Homeowners Alert</strong>
+        <p>New rules may affect your house!</p>
+      </div>
+
+      <div class="sidebar-ad">
+        <strong>Did You Know?</strong>
+        <p>Some colours may lower property value.</p>
+      </div>
+    </aside>
   </div>
 
   <footer>
-    © 2026 OttawaNews | About | Contact | Privacy  
-    <br>
-    Content may not be verified. Opinions expressed are those of the author.
+    <p>© 2026 Ottawa Local News</p>
+    <p>Information gathered from community discussions and online sources.</p>
   </footer>
+
+  <script>
+    function closePopup() {
+      document.getElementById("popup").classList.add("hidden");
+    }
+  </script>
 
 </body>
 </html>
