@@ -116,12 +116,58 @@
     }
 
     .comment {
-      margin-bottom: 10px;
+      display: flex;
+      margin-bottom: 15px;
       font-size: 14px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 8px;
+    }
+
+    .comment img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .comment-content {
+      flex: 1;
     }
 
     .comment strong {
       color: #1f4fa3;
+      font-size: 14px;
+    }
+
+    .comment-time {
+      font-size: 11px;
+      color: #777;
+      margin-left: 5px;
+    }
+
+    .comment-input {
+      display: flex;
+      margin-top: 15px;
+      align-items: center;
+    }
+
+    .comment-input input {
+      flex: 1;
+      padding: 8px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      margin-right: 5px;
+    }
+
+    .comment-input button {
+      padding: 8px 10px;
+      font-size: 14px;
+      border-radius: 3px;
+      border: none;
+      background-color: #1f4fa3;
+      color: white;
+      cursor: pointer;
     }
 
     .popup {
@@ -237,28 +283,55 @@
       <!-- COMMENTS -->
       <div class="comments">
         <h3>Comments (14)</h3>
+
         <div class="comment">
-          <strong>OttawaFan:</strong> I heard the tunnel one is real
+          <img src="https://picsum.photos/seed/jim/40" alt="Jim profile pic">
+          <div class="comment-content">
+            <strong>OttawaFan</strong><span class="comment-time">• 2 hours ago</span><br>
+            I heard the tunnel one is real
+          </div>
         </div>
+
         <div class="comment">
-          <strong>KanataDad:</strong> Our door is purple and no one said anything
+          <img src="https://picsum.photos/seed/kanata/40" alt="KanataDad profile pic">
+          <div class="comment-content">
+            <strong>KanataDad</strong><span class="comment-time">• 3 hours ago</span><br>
+            Our door is purple and no one said anything
+          </div>
         </div>
+
         <div class="comment">
-          <strong>LibraryLover:</strong> I whistle all the time and never got in trouble
+          <img src="https://picsum.photos/seed/library/40" alt="LibraryLover profile pic">
+          <div class="comment-content">
+            <strong>LibraryLover</strong><span class="comment-time">• 5 hours ago</span><br>
+            I whistle all the time and never got in trouble
+          </div>
         </div>
+
         <div class="comment">
-          <strong>FactChecker:</strong> Where did this information come from
+          <img src="https://picsum.photos/seed/fact/40" alt="FactChecker profile pic">
+          <div class="comment-content">
+            <strong>FactChecker</strong><span class="comment-time">• 1 day ago</span><br>
+            Where did this information come from
+          </div>
+        </div>
+
+        <!-- Input for discussion -->
+        <div class="comment-input">
+          <input type="text" placeholder="Share your thoughts!">
+          <button>Post</button>
         </div>
       </div>
     </article>
 
     <aside>
+      <!-- FAKE CLICKBAIT AD -->
       <div class="sidebar-ad">
         <div class="close-btn" onclick="this.parentElement.style.display='none'">X</div>
         <p class="sponsored">ADVERTISEMENT</p>
-        <img src="Pizza.jpeg" alt="Pizza ad">
-        <p>Hot pizza tonight! order from Tony’s Pizza</p>
-        <button>Order Now</button>
+        <img src="https://picsum.photos/seed/clickbait/300/250" alt="Clickbait ad">
+        <p>Shocking secret about Ottawa! click here to find out</p>
+        <button>Learn More</button>
       </div>
 
       <div class="sidebar-ad">
