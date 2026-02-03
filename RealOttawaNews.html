@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>City of Ottawa: Housing Facts</title>
+  <title>City of Ottawa – Housing Information</title>
+
   <style>
     body {
-      font-family: Georgia, serif;
+      font-family: Arial, sans-serif;
       margin: 0;
-      background-color: #f9f9f9;
+      background-color: #f6f6f6;
       color: #222;
     }
 
@@ -17,21 +18,38 @@
       padding: 20px;
     }
 
+    .header-top {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo {
+      font-size: 36px;
+    }
+
     header h1 {
       margin: 0;
-      font-size: 28px;
+      font-size: 26px;
+    }
+
+    header p {
+      margin: 5px 0 0;
+      font-size: 14px;
     }
 
     nav {
-      background-color: #ffe6e6;
-      padding: 12px 20px;
+      background-color: #ffffff;
+      border-bottom: 1px solid #ccc;
+      padding: 10px 20px;
     }
 
     nav a {
       margin-right: 20px;
       text-decoration: none;
-      color: #800000;
+      color: #333;
       font-weight: bold;
+      font-size: 14px;
     }
 
     .container {
@@ -41,10 +59,9 @@
 
     article {
       background-color: white;
-      padding: 20px;
+      padding: 25px;
       width: 70%;
-      box-shadow: 1px 1px 4px #ccc;
-      border-radius: 3px;
+      border: 1px solid #ddd;
     }
 
     aside {
@@ -52,88 +69,132 @@
       margin-left: 20px;
     }
 
-    .fact {
-      margin-bottom: 18px;
+    h2 {
+      color: #900000;
     }
 
     .meta {
       font-size: 12px;
       color: #555;
-      margin-bottom: 15px;
-    }
-
-    h2 {
-      color: #800000;
-    }
-
-    .did-you-know {
-      background-color: #ffe6e6;
-      padding: 10px;
-      border-left: 3px solid #ff0000;
       margin-bottom: 20px;
-      font-style: italic;
+    }
+
+    .section {
+      margin-bottom: 20px;
+    }
+
+    .section strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .info-box {
+      background-color: #f2f2f2;
+      padding: 12px;
+      border-left: 4px solid #ff0000;
+      font-size: 14px;
+      margin-bottom: 20px;
     }
 
     footer {
       background-color: #333;
       color: white;
-      text-align: center;
-      padding: 12px;
+      padding: 15px;
       font-size: 12px;
-      margin-top: 20px;
+      margin-top: 30px;
     }
 
-    a.source {
-      color: #800000;
-      text-decoration: underline;
-      font-size: 12px;
+    a {
+      color: #004c99;
     }
-
   </style>
 </head>
+
 <body>
 
   <header>
-    <h1>City of Ottawa – Housing Facts</h1>
-    <p>Official information regarding local housing and municipal guidelines</p>
+    <div class="header-top">
+      <div class="logo">🇨🇦</div>
+      <div>
+        <h1>City of Ottawa</h1>
+        <p>Housing and Property Standards Information</p>
+      </div>
+    </div>
   </header>
 
   <nav>
     <a href="#">Home</a>
-    <a href="#">Housing Guidelines</a>
-    <a href="#">FAQs</a>
-    <a href="#">Contact</a>
+    <a href="#">Housing Rules</a>
+    <a href="#">Community Questions</a>
+    <a href="#">Contact the City</a>
   </nav>
 
   <div class="container">
     <article>
-      <h2>The Purple Door Claim in Kanata</h2>
-      <p class="meta">Published by: City of Ottawa – Housing Department • January 2026</p>
 
-      <div class="fact">
-        <strong>Claim:</strong> Residents are prohibited from painting their doors purple in Kanata.<br>
-        <strong>Official Statement:</strong> This claim is incorrect. The City of Ottawa has no regulations restricting the color of doors on private residential property. All guidelines focus on property safety, accessibility, and maintenance. Any online references suggesting a purple door restriction are inaccurate.  
-        <a class="source" href="https://ottawa.ca/en/living-ottawa/housing-home" target="_blank">Source: Ottawa Housing Guidelines</a>
+      <h2>Purple Door Claim in Kanata</h2>
+
+      <p class="meta">
+        Published by: Housing and Property Standards Division<br>
+        City of Ottawa<br>
+        Published: January 2026<br>
+        Last reviewed: December 2025
+      </p>
+
+      <div class="section">
+        <strong>Purpose of this page</strong>
+        This page provides clear and accurate information about local housing rules
+        and common claims shared by the public.
       </div>
 
-      <div class="did-you-know">
-        Local myths about housing rules often spread online. Always consult official municipal sources for verification.
+      <div class="section">
+        <strong>The claim</strong>
+        Some people believe that it is illegal to paint your front door purple
+        in the community of Kanata.
       </div>
 
-      <p>Residents may paint their doors any color they prefer, provided the work follows standard building and safety codes. This includes Kanata homes as well as other Ottawa neighborhoods.</p>
+      <div class="section">
+        <strong>Official finding</strong>
+        This claim is not true. The City of Ottawa does not have any rule or law
+        that controls the colour of doors on private homes.
+      </div>
+
+      <div class="section">
+        <strong>Evidence</strong>
+        City housing guidelines focus on safety, maintenance, and accessibility.
+        Door colour is not mentioned in any municipal by-laws or property standards.
+        <br><br>
+        Source:
+        <a href="https://ottawa.ca/en/living-ottawa/housing-home" target="_blank">
+          City of Ottawa – Housing Information
+        </a>
+      </div>
+
+      <div class="info-box">
+        Claims like this often spread online or through word of mouth.
+        Checking official city information helps confirm whether something is true.
+      </div>
 
     </article>
 
     <aside>
-      <div class="did-you-know">
-        <strong>Extra Information:</strong><br>
-        The City of Ottawa regularly updates its municipal guidelines. All official housing rules are documented on the City of Ottawa website.
+      <div class="info-box">
+        <strong>About this department</strong><br>
+        The Housing and Property Standards Division is responsible for
+        sharing accurate information about housing rules for Ottawa residents.
+      </div>
+
+      <div class="info-box">
+        <strong>Contact information</strong><br>
+        City of Ottawa<br>
+        Website: ottawa.ca<br>
+        Phone: 3-1-1
       </div>
     </aside>
   </div>
 
   <footer>
-    <p>© 2026 City of Ottawa – Housing Department • All information verified and published officially</p>
+    © 2026 City of Ottawa. This information is provided for public education purposes.
   </footer>
 
 </body>
