@@ -18,10 +18,6 @@
       padding: 15px;
     }
 
-    header h1 {
-      margin: 0;
-    }
-
     nav {
       background-color: #e0e0e0;
       padding: 10px;
@@ -51,17 +47,34 @@
     }
 
     .ad {
-      background-color: #fff0f0;
-      border: 2px solid #cc0000;
-      padding: 10px;
-      margin: 20px 0;
-      font-size: 14px;
+      position: relative;
+      margin: 25px 0;
+      border: 1px solid #ccc;
+      background-color: #fafafa;
+    }
+
+    .ad img {
+      width: 100%;
+      display: block;
     }
 
     .sponsored {
       font-size: 11px;
-      color: #900;
       font-weight: bold;
+      color: #900;
+      padding: 5px;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 5px;
+      right: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      background: #000;
+      color: white;
+      padding: 2px 6px;
+      font-size: 12px;
     }
 
     aside {
@@ -69,12 +82,11 @@
       margin-left: 20px;
     }
 
-    .sidebar-ad {
-      background-color: #ffffcc;
-      border: 1px solid #999;
-      padding: 10px;
+    .sidebar-box {
+      background-color: white;
+      padding: 15px;
       margin-bottom: 15px;
-      font-size: 14px;
+      border: 1px solid #ccc;
     }
 
     footer {
@@ -85,21 +97,32 @@
       font-size: 12px;
     }
 
+    .comments {
+      margin-top: 30px;
+      border-top: 1px solid #ccc;
+      padding-top: 15px;
+    }
+
+    .comment {
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+
+    .comment strong {
+      color: #1f4fa3;
+    }
+
     /* Popup */
     .popup {
       position: fixed;
       top: 20%;
-      left: 25%;
-      width: 50%;
+      left: 30%;
+      width: 40%;
       background-color: white;
-      border: 3px solid red;
-      padding: 20px;
+      border: 2px solid red;
+      padding: 15px;
       z-index: 1000;
       box-shadow: 0px 0px 10px black;
-    }
-
-    .popup button {
-      margin-top: 10px;
     }
 
     .hidden {
@@ -110,17 +133,17 @@
 
 <body>
 
-  <!-- POPUP -->
+  <!-- POPUP AD -->
   <div id="popup" class="popup">
-    <h3>⚠️ Special Alert!</h3>
-    <p>Ottawa residents could be affected by new rules.  
-    Click below to learn more before it’s too late!</p>
-    <button onclick="closePopup()">Close</button>
+    <div class="close-btn" onclick="closePopup()">X</div>
+    <p class="sponsored">ADVERTISEMENT</p>
+    <img src="https://via.placeholder.com/500x200?text=Homeowners+Alert" alt="Ad">
+    <p>Some rules may affect your home. Learn more today.</p>
   </div>
 
   <header>
     <h1>Ottawa Local News</h1>
-    <p>Community stories • Trending topics • What people are talking about</p>
+    <p>Community stories • Local updates • What people are talking about</p>
   </header>
 
   <nav>
@@ -136,7 +159,7 @@
       <h2>Is It Illegal to Paint Your Door Purple in Kanata?</h2>
 
       <p class="meta">
-        By <strong>BoB</strong> • Published January 2026 • Updated recently
+        By <strong>BoB</strong>, Community Contributor • Published January 2026 • Updated recently
       </p>
 
       <p>
@@ -147,48 +170,61 @@
 
       <p>
         Reports suggest certain neighbourhoods may restrict door colours due to
-        community standards and appearance rules. Exact by-law details, however,
-        are not clearly listed.
+        community standards and appearance rules. The exact by-law number,
+        however, could not be found.
       </p>
 
       <p>
         “My neighbour told me he heard purple doors were illegal,” said one resident
-        on social media. “I wouldn’t take the risk.”
+        in an online discussion. “I wouldn’t take the risk.”
       </p>
 
-      <p>
-        Sources for this information include online reports, social media posts,
-        and local knowledge shared by residents.
-      </p>
+      <h3>Sources</h3>
+      <ul>
+        <li>Online reports</li>
+        <li>Community discussions</li>
+        <li>Local social media posts</li>
+      </ul>
 
+      <!-- IN-ARTICLE AD -->
       <div class="ad">
+        <div class="close-btn" onclick="this.parentElement.style.display='none'">X</div>
         <p class="sponsored">SPONSORED</p>
-        <p>You could be entitled to compensation for home upgrades!  
-        <strong>Click here</strong> to see if you qualify.</p>
+        <img src="https://via.placeholder.com/700x180?text=Know+Your+Home+Rules" alt="Ad">
       </div>
 
-      <div class="ad">
-        <p class="sponsored">ADVERTISEMENT</p>
-        <p>Government rules change fast!  
-        Get updates sent straight to your inbox.</p>
+      <!-- COMMENTS -->
+      <div class="comments">
+        <h3>Comments (12)</h3>
+
+        <div class="comment">
+          <strong>PurpleDoorFan92:</strong> My cousin said his friend got warned about this.
+        </div>
+
+        <div class="comment">
+          <strong>KanataMom:</strong> We painted our door purple last year and nothing happened.
+        </div>
+
+        <div class="comment">
+          <strong>HouseRulesGuy:</strong> This sounds fake. Where is the actual law?
+        </div>
+
+        <div class="comment">
+          <strong>OttawaLife:</strong> I saw this on Facebook too so it must be true.
+        </div>
       </div>
 
     </article>
 
     <aside>
-      <div class="sidebar-ad">
-        <strong>🔥 Trending</strong>
+      <div class="sidebar-box">
+        <strong>Trending</strong>
         <p>10 Ottawa Facts You Won’t Believe</p>
       </div>
 
-      <div class="sidebar-ad">
-        <strong>Homeowners Alert</strong>
-        <p>New rules may affect your house!</p>
-      </div>
-
-      <div class="sidebar-ad">
+      <div class="sidebar-box">
         <strong>Did You Know?</strong>
-        <p>Some colours may lower property value.</p>
+        <p>Some house colours may affect property value.</p>
       </div>
     </aside>
   </div>
