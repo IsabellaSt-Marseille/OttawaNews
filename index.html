@@ -46,14 +46,14 @@
       color: #555;
     }
 
-    .ad {
+    .ad, .sidebar-ad {
       position: relative;
       margin: 25px 0;
       border: 1px solid #ccc;
       background-color: #fafafa;
     }
 
-    .ad img {
+    .ad img, .sidebar-ad img {
       width: 100%;
       display: block;
     }
@@ -82,13 +82,6 @@
       margin-left: 20px;
     }
 
-    .sidebar-box {
-      background-color: white;
-      padding: 15px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-    }
-
     footer {
       background-color: #333;
       color: white;
@@ -112,7 +105,6 @@
       color: #1f4fa3;
     }
 
-    /* Popup */
     .popup {
       position: fixed;
       top: 20%;
@@ -133,12 +125,12 @@
 
 <body>
 
-  <!-- POPUP AD -->
+  <!-- POP-UP AD -->
   <div id="popup" class="popup">
     <div class="close-btn" onclick="closePopup()">X</div>
     <p class="sponsored">ADVERTISEMENT</p>
-    <img src="https://via.placeholder.com/500x200?text=Homeowners+Alert" alt="Ad">
-    <p>Some rules may affect your home. Learn more today.</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/McDonald%27s_logo.svg" alt="McDonald's Ad">
+    <p>Hungry? Deals near you today!</p>
   </div>
 
   <header>
@@ -190,7 +182,7 @@
       <div class="ad">
         <div class="close-btn" onclick="this.parentElement.style.display='none'">X</div>
         <p class="sponsored">SPONSORED</p>
-        <img src="https://via.placeholder.com/700x180?text=Know+Your+Home+Rules" alt="Ad">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Nike_logo.svg" alt="Nike Ad">
       </div>
 
       <!-- COMMENTS -->
@@ -213,18 +205,19 @@
           <strong>OttawaLife:</strong> I saw this on Facebook too so it must be true.
         </div>
       </div>
-
     </article>
 
     <aside>
-      <div class="sidebar-box">
-        <strong>Trending</strong>
-        <p>10 Ottawa Facts You Won’t Believe</p>
+      <div class="sidebar-ad">
+        <div class="close-btn" onclick="this.parentElement.style.display='none'">X</div>
+        <p class="sponsored">ADVERTISEMENT</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Adidas_Logo.svg" alt="Adidas Ad">
       </div>
 
-      <div class="sidebar-box">
-        <strong>Did You Know?</strong>
-        <p>Some house colours may affect property value.</p>
+      <div class="sidebar-ad">
+        <div class="close-btn" onclick="this.parentElement.style.display='none'">X</div>
+        <p class="sponsored">ADVERTISEMENT</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/McDonald%27s_Logo.svg" alt="McDonald's Ad">
       </div>
     </aside>
   </div>
