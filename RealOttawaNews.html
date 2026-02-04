@@ -2,14 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>City of Ottawa – Housing Information</title>
+  <title>City of Ottawa – Community Information</title>
 
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      background-color: #f6f6f6;
+      background-color: #f5f5f5;
       color: #222;
+      line-height: 1.6;
     }
 
     header {
@@ -18,184 +19,168 @@
       padding: 20px;
     }
 
-    .header-top {
+    .header-content {
       display: flex;
       align-items: center;
-      gap: 15px;
     }
 
     .logo {
-      font-size: 36px;
+      width: 60px;
+      height: 40px;
+      background-color: white;
+      margin-right: 15px;
+      position: relative;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 26px;
+    .logo::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 20px;
+      height: 100%;
+      background-color: #ff0000;
     }
 
-    header p {
-      margin: 5px 0 0;
-      font-size: 14px;
+    .logo::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 20px;
+      height: 100%;
+      background-color: #ff0000;
     }
 
     nav {
-      background-color: #ffffff;
-      border-bottom: 1px solid #ccc;
+      background-color: #e6e6e6;
       padding: 10px 20px;
     }
 
     nav a {
       margin-right: 20px;
       text-decoration: none;
-      color: #333;
+      color: #000;
       font-weight: bold;
       font-size: 14px;
     }
 
-    .container {
-      display: flex;
-      padding: 20px;
-    }
-
-    article {
+    main {
+      max-width: 900px;
+      margin: 30px auto;
       background-color: white;
-      padding: 25px;
-      width: 70%;
-      border: 1px solid #ddd;
+      padding: 30px;
     }
 
-    aside {
-      width: 25%;
-      margin-left: 20px;
-    }
-
-    h2 {
-      color: #900000;
+    h1, h2 {
+      color: #000;
     }
 
     .meta {
-      font-size: 12px;
+      font-size: 13px;
       color: #555;
       margin-bottom: 20px;
     }
 
-    .section {
-      margin-bottom: 20px;
-    }
-
-    .section strong {
-      display: block;
-      margin-bottom: 5px;
-    }
-
     .info-box {
-      background-color: #f2f2f2;
-      padding: 12px;
-      border-left: 4px solid #ff0000;
-      font-size: 14px;
-      margin-bottom: 20px;
+      background-color: #f0f8ff;
+      border-left: 5px solid #ff0000;
+      padding: 15px;
+      margin: 25px 0;
+    }
+
+    ul {
+      margin-top: 10px;
     }
 
     footer {
       background-color: #333;
       color: white;
+      text-align: center;
       padding: 15px;
       font-size: 12px;
-      margin-top: 30px;
-    }
-
-    a {
-      color: #004c99;
     }
   </style>
 </head>
 
 <body>
 
-  <header>
-    <div class="header-top">
-      <div class="logo">🇨🇦</div>
-      <div>
-        <h1>City of Ottawa</h1>
-        <p>Housing and Property Standards Information</p>
-      </div>
+<header>
+  <div class="header-content">
+    <div class="logo" aria-label="Canadian flag symbol"></div>
+    <div>
+      <h1>City of Ottawa</h1>
+      <p>Official Community Information</p>
     </div>
-  </header>
+  </div>
+</header>
 
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Housing Rules</a>
-    <a href="#">Community Questions</a>
-    <a href="#">Contact the City</a>
-  </nav>
+<nav>
+  <a href="#">Home</a>
+  <a href="#">By-laws & Rules</a>
+  <a href="#">Housing Information</a>
+  <a href="#">Contact the City</a>
+</nav>
 
-  <div class="container">
-    <article>
+<main>
+  <h2>Myth Check: Is It Illegal to Paint Your Door Purple in Ottawa?</h2>
 
-      <h2>Purple Door Claim in Kanata</h2>
+  <p class="meta">
+    Written by: <strong>City of Ottawa – Housing Services</strong><br>
+    Published: January 2026<br>
+    Reviewed and updated: January 2026
+  </p>
 
-      <p class="meta">
-        Published by: Housing and Property Standards Division<br>
-        City of Ottawa<br>
-        Published: January 2026<br>
-        Last reviewed: December 2025
-      </p>
+  <p>
+    You may have heard the claim that painting your front door purple is illegal
+    in parts of Ottawa. This information has been shared online and through word
+    of mouth, but it is important to check whether it is true.
+  </p>
 
-      <div class="section">
-        <strong>Purpose of this page</strong>
-        This page provides clear and accurate information about local housing rules
-        and common claims shared by the public.
-      </div>
-
-      <div class="section">
-        <strong>The claim</strong>
-        Some people believe that it is illegal to paint your front door purple
-        in the community of Kanata.
-      </div>
-
-      <div class="section">
-        <strong>Official finding</strong>
-        This claim is not true. The City of Ottawa does not have any rule or law
-        that controls the colour of doors on private homes.
-      </div>
-
-      <div class="section">
-        <strong>Evidence</strong>
-        City housing guidelines focus on safety, maintenance, and accessibility.
-        Door colour is not mentioned in any municipal by-laws or property standards.
-        <br><br>
-        Source:
-        <a href="https://ottawa.ca/en/living-ottawa/housing-home" target="_blank">
-          City of Ottawa – Housing Information
-        </a>
-      </div>
-
-      <div class="info-box">
-        Claims like this often spread online or through word of mouth.
-        Checking official city information helps confirm whether something is true.
-      </div>
-
-    </article>
-
-    <aside>
-      <div class="info-box">
-        <strong>About this department</strong><br>
-        The Housing and Property Standards Division is responsible for
-        sharing accurate information about housing rules for Ottawa residents.
-      </div>
-
-      <div class="info-box">
-        <strong>Contact information</strong><br>
-        City of Ottawa<br>
-        Website: ottawa.ca<br>
-        Phone: 3-1-1
-      </div>
-    </aside>
+  <div class="info-box">
+    <strong>Conclusion:</strong><br>
+    There is <strong>no city-wide law</strong> in Ottawa that makes it illegal to
+    paint your front door purple.
   </div>
 
-  <footer>
-    © 2026 City of Ottawa. This information is provided for public education purposes.
-  </footer>
+  <p>
+    The City of Ottawa does not have a by-law that restricts door colours for
+    private homes. In most neighbourhoods, homeowners are free to choose the
+    colour of their doors.
+  </p>
+
+  <p>
+    In some cases, special rules may apply to:
+  </p>
+
+  <ul>
+    <li>Heritage buildings</li>
+    <li>Homes with a homeowners’ association (HOA)</li>
+    <li>Buildings with specific design agreements</li>
+  </ul>
+
+  <p>
+    These rules are not city laws and only apply in specific situations. Residents
+    can contact the City of Ottawa or review official by-laws if they are unsure.
+  </p>
+
+  <h3>How This Information Was Checked</h3>
+
+  <p>
+    City staff reviewed current Ottawa by-laws and housing guidelines to confirm
+    this information. Sources include official city documents and public records.
+  </p>
+
+  <p>
+    This page is reviewed regularly to ensure information is accurate and up to
+    date.
+  </p>
+</main>
+
+<footer>
+  <p>© 2026 City of Ottawa</p>
+  <p>This information is provided for educational purposes and public awareness.</p>
+</footer>
 
 </body>
 </html>
